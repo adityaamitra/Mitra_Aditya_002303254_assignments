@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" attributes="0">
+              <EmptySpace pref="67" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="2" attributes="0">
+                  <Component id="lblprof" linkSize="4" alignment="2" min="-2" max="-2" attributes="0"/>
+                  <Component id="lbladd2" linkSize="4" alignment="2" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblblood" linkSize="4" alignment="2" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblcity" linkSize="4" alignment="2" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblhob" linkSize="4" alignment="2" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblstate" linkSize="4" alignment="2" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblFav" linkSize="4" alignment="2" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblzip" linkSize="4" alignment="2" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblgender" linkSize="4" alignment="2" min="-2" max="-2" attributes="0"/>
+                  <Component id="lbltel" linkSize="4" alignment="2" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblfirst" linkSize="4" alignment="2" min="-2" max="-2" attributes="0"/>
+                  <Component id="lbllast" linkSize="4" alignment="2" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblheight" linkSize="4" alignment="2" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblemail" linkSize="4" alignment="2" max="32767" attributes="0"/>
+                  <Component id="lblphone" linkSize="4" alignment="2" max="32767" attributes="0"/>
+                  <Component id="lbllicno" linkSize="4" alignment="2" min="-2" max="-2" attributes="0"/>
+                  <Component id="lbllicst" linkSize="4" alignment="2" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblssn" linkSize="4" alignment="2" min="-2" pref="87" max="-2" attributes="0"/>
+                  <Component id="lbladd1" linkSize="4" alignment="2" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblfax" linkSize="4" alignment="2" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace pref="67" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="2" attributes="0">
+                  <Component id="txtssn" linkSize="5" alignment="2" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtadd1" linkSize="5" alignment="2" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtprof" linkSize="5" alignment="2" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtadd2" linkSize="5" alignment="2" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtblood" linkSize="5" alignment="2" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtcity" linkSize="5" alignment="2" min="-2" max="-2" attributes="0"/>
+                  <Component id="txthob" linkSize="5" alignment="2" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtstate" linkSize="5" alignment="2" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtfav" linkSize="5" alignment="2" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtzip" linkSize="5" alignment="2" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtgender" linkSize="5" alignment="2" min="-2" max="-2" attributes="0"/>
+                  <Component id="txttel" linkSize="5" alignment="2" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtheight" linkSize="5" alignment="2" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtfax" linkSize="5" alignment="2" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtemail" linkSize="5" alignment="2" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtphone" linkSize="5" alignment="2" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtlicno" linkSize="5" alignment="2" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtlicst" linkSize="5" alignment="2" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtlast" linkSize="5" alignment="2" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtfirst" linkSize="5" alignment="2" min="-2" pref="183" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="172" max="-2" attributes="0"/>
+          </Group>
+          <Component id="lblTitle" alignment="1" max="32767" attributes="0"/>
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace max="32767" attributes="0"/>
+              <Component id="btnSave" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="216" max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
+              <Component id="lblTitle" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Component id="txtfirst" linkSize="6" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblfirst" linkSize="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Component id="txtlast" linkSize="6" alignment="1" min="-2" max="-2" attributes="0"/>
+                  <Component id="lbllast" linkSize="3" alignment="1" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Component id="txtemail" linkSize="6" alignment="1" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblemail" linkSize="3" alignment="1" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Component id="txtphone" linkSize="6" alignment="1" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblphone" linkSize="3" alignment="1" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="lbllicno" linkSize="3" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtlicno" linkSize="6" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="lbllicst" linkSize="3" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtlicst" linkSize="6" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                      <Component id="lblssn" linkSize="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="txtssn" linkSize="6" min="-2" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="lblprof" linkSize="3" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtprof" linkSize="6" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Component id="txtblood" linkSize="6" alignment="1" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblblood" linkSize="3" alignment="1" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Component id="txthob" linkSize="6" alignment="1" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblhob" linkSize="3" alignment="1" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Component id="txtfav" linkSize="6" alignment="1" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblFav" linkSize="3" alignment="1" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="lblgender" linkSize="3" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtgender" linkSize="6" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="lblheight" linkSize="3" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtheight" linkSize="6" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="lbladd1" linkSize="3" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtadd1" linkSize="6" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="lbladd2" linkSize="3" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtadd2" linkSize="6" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="lblcity" linkSize="3" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtcity" linkSize="6" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Component id="txtstate" linkSize="6" alignment="1" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblstate" linkSize="3" alignment="1" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Component id="txtzip" linkSize="6" alignment="1" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblzip" linkSize="3" alignment="1" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="lbltel" linkSize="3" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txttel" linkSize="6" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="lblfax" linkSize="3" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtfax" linkSize="6" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="btnSave" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="12" max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Component class="javax.swing.JTextField" name="txtfirst">
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblfirst">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="First Name"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lbllast">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="Last Name"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtlast">
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblemail">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="Email"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtemail">
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblphone">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="Phone"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtphone">
+    </Component>
+    <Component class="javax.swing.JLabel" name="lbllicno">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="DL License No"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtlicno">
+    </Component>
+    <Component class="javax.swing.JLabel" name="lbllicst">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="DL License State"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtlicst">
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblssn">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="SSN"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtssn">
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblprof">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="Profession"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtprof">
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblblood">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="Blood group"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtblood">
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblhob">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="Hobbies"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txthob">
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblFav">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="Favourite Food"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtfav">
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblgender">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="Gender"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtgender">
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblheight">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="Height"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtheight">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtheightActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lbladd1">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="Address 1"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtadd1">
+    </Component>
+    <Component class="javax.swing.JLabel" name="lbladd2">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="Address 2"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtadd2">
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblcity">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="City"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtcity">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtcityActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblstate">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="State"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtstate">
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblzip">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="ZIP"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtzip">
+    </Component>
+    <Component class="javax.swing.JLabel" name="lbltel">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="Tel Number"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txttel">
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblfax">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="Fax Number"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtfax">
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblTitle">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Helvetica Neue" size="18" style="1"/>
+        </Property>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="Personal Information"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnSave">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Save"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSaveActionPerformed"/>
+      </Events>
+    </Component>
+  </SubComponents>
+</Form>

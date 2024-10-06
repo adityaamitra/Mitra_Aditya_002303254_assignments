@@ -7,6 +7,7 @@ package ui;
 import model.Person;
 import model.PersonDirectory;
 import java.awt.CardLayout;
+import java.util.Date;
 import model.Address;
 import ui.ManagePerson.*;
 
@@ -23,36 +24,36 @@ public class MainJFrame extends javax.swing.JFrame {
     private PersonDirectory personDirectory;
    
     
-    private Address h1;
-    private Address h2;
-    private Address h3;
-    private Address h4;
-    private Address h5;
+    private Address hAdd1;
+    private Address hAdd2;
+    private Address hAdd3;
+    private Address hAdd4;
+    private Address hAdd5;
     
-    private Address w1;
-    private Address w2;
-    private Address w3;
-    private Address w4;
-    private Address w5;
+    private Address wAdd1;
+    private Address wAdd2;
+    private Address wAdd3;
+    private Address wAdd4;
+    private Address wAdd5;
                
     
     public MainJFrame() {
         initComponents();
         this.personDirectory = new PersonDirectory();
-        this.h1 = new Address();
-        this.w1 = new Address();
+        this.hAdd1 = new Address();
+        this.wAdd1 = new Address();
         
-        this.h2 = new Address();
-        this.w2 = new Address();
+        this.hAdd2 = new Address();
+        this.wAdd2 = new Address();
         
-        this.h3 = new Address();
-        this.w3 = new Address();
+        this.hAdd3 = new Address();
+        this.wAdd3 = new Address();
         
-        this.h4 = new Address();
-        this.w4 = new Address();
+        this.hAdd4 = new Address();
+        this.wAdd4 = new Address();
         
-        this.h5 = new Address();
-        this.w5 = new Address();
+        this.hAdd5 = new Address();
+        this.wAdd5 = new Address();
         generateDemoData();
     }
 
@@ -74,6 +75,9 @@ public class MainJFrame extends javax.swing.JFrame {
 
         jSplitPane1.setOrientation(javax.swing.JSplitPane.VERTICAL_SPLIT);
 
+        jPanel1.setBackground(new java.awt.Color(204, 255, 204));
+
+        btnOpenWorkArea.setBackground(new java.awt.Color(255, 204, 204));
         btnOpenWorkArea.setText("Open Work Area");
         btnOpenWorkArea.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -171,87 +175,139 @@ public class MainJFrame extends javax.swing.JFrame {
     private javax.swing.JPanel userProcessContainer;
     // End of variables declaration//GEN-END:variables
 private void generateDemoData() {
-        Person p1 = personDirectory.addPerson();
-        p1.setFirstName("Aditya");
-        p1.setLastName("Mitra");
-        p1.setSsn(12345);
-        p1.setAge(24);
-        h1.setStreetAddress("S Huntington");
-        h1.setCity("Boston");
-        h1.setUnit(30);
-        h1.setPhoneNumber("9082372993");
-        h1.setState("MA");
-        w1.setStreetAddress("S Huntington");
-        w1.setCity("Boston");
-        w1.setUnit(30);
-        w1.setPhoneNumber("9082372993");
-        w1.setState("MA");
+    
+        Date date = new Date();
         
-     
+        Person p = personDirectory.addPerson();
+        p.setFirstName("Aditya");
+        p.setLastName("mitra");
+        p.setSsn(112);
+        p.setAge(24);
+        p.setLastUpdated(date);
         
-        Person p2 = personDirectory.addPerson();
-        p2.setFirstName("Kaustubh");
-        p2.setLastName("Ambre");
-        p2.setSsn(14345);
-        p2.setAge(21);
-        h2.setStreetAddress("S Huntington");
-        h2.setCity("Boston");
-        h2.setUnit(3);
-        h2.setPhoneNumber("9072993");
-        h2.setState("MA");
-        w2.setStreetAddress("S Huntington");
-        w2.setCity("Boston");
-        w2.setUnit(32);
-        w2.setPhoneNumber("907299313");
-        w2.setState("MA");
+        hAdd1.setStreetAddress("30 South Huntington");
+        hAdd1.setUnit(3);
+        hAdd1.setCity("Boston");
+        hAdd1.setState("MA");
+        hAdd1.setZipCode(2130);
+        hAdd1.setPhoneNumber("9082372993");
         
-        Person p3 = personDirectory.addPerson();
-        p3.setFirstName("Mansi");
-        p3.setLastName("Kamble");
-        p3.setSsn(21345);
-        p3.setAge(24);
-        h3.setStreetAddress("S Huntington");
-        h3.setCity("Boston");
-        h3.setUnit(39);
-        h3.setPhoneNumber("87671203");
-        h3.setState("MA");
-        w3.setStreetAddress("S Huntington");
-        w3.setCity("Boston");
-        w3.setUnit(39);
-        w3.setPhoneNumber("87671203");
-        w3.setState("MA");
+        p.setHomeAddress(hAdd1);
         
-        Person p4 = personDirectory.addPerson();
-        p4.setFirstName("Vedant");
-        p4.setLastName("Mane");
-        p4.setSsn(2183);
-        p4.setAge(26);
-        h4.setStreetAddress("S Huntington");
-        h4.setCity("Boston");
-        h4.setUnit(9);
-        h4.setPhoneNumber("21873741");
-        h4.setState("MA");
-        w4.setStreetAddress("S Huntington");
-        w4.setCity("Boston");
-        w4.setUnit(89);
-        w4.setPhoneNumber("239123");
-        w4.setState("MA");
+        wAdd1.setStreetAddress("40 S Huntington");
+        wAdd1.setUnit(20);
+        wAdd1.setCity("Jamaica Plain");
+        wAdd1.setState("MA");
+        wAdd1.setZipCode(1023);
+        wAdd1.setPhoneNumber("2131283");
         
-        Person p5 = personDirectory.addPerson();
-        p5.setFirstName("Abhinav");
-        p5.setLastName("Gangurde");
-        p5.setSsn(312312);
-        p5.setAge(27);
-        h5.setStreetAddress("S Huntington");
-        h5.setCity("Boston");
-        h5.setUnit(12);
-        h5.setPhoneNumber("354231234");
-        h5.setState("MA");
-        w5.setStreetAddress("Brookline");
-        w5.setCity("Boston");
-        w5.setUnit(40);
-        w5.setPhoneNumber("2394294");
-        w5.setState("MA");
+        p.setWorkAddress(wAdd1);
+        
+        p = personDirectory.addPerson();
+        p.setFirstName("Mansi");
+        p.setLastName("Kamble");
+        p.setSsn(122);
+        p.setAge(25);
+        p.setLastUpdated(date);
+        
+        hAdd2.setStreetAddress("30 S Huntington");
+        hAdd2.setUnit(4);
+        hAdd2.setCity("Brooklyn");
+        hAdd2.setState("MA");
+        hAdd2.setZipCode(1412);
+        hAdd2.setPhoneNumber("92384102");
+        
+        p.setHomeAddress(hAdd2);
+        
+        wAdd2.setStreetAddress("40 S Huington");
+        wAdd2.setUnit(2);
+        wAdd2.setCity("Roxbury");
+        wAdd2.setState("MA");
+        wAdd2.setZipCode(1012);
+        wAdd2.setPhoneNumber("232112731");
+        
+        p.setWorkAddress(wAdd2);
+        
+        p = personDirectory.addPerson();
+        p.setFirstName("Kaustubh");
+        p.setLastName("Ambre");
+        p.setSsn(23423);
+        p.setAge(21);
+        p.setLastUpdated(date);
+        
+        hAdd3.setStreetAddress("12 Summer Street");
+        hAdd3.setUnit(3);
+        hAdd3.setCity("Downtown");
+        hAdd3.setState("MA");
+        hAdd3.setZipCode(2311);
+        hAdd3.setPhoneNumber("12312341");
+        
+        p.setHomeAddress(hAdd3);
+        
+        wAdd3.setStreetAddress("12 Winter Streer");
+        wAdd3.setUnit(2);
+        wAdd3.setCity("Downtown");
+        wAdd3.setState("MA");
+        wAdd3.setZipCode(2311);
+        wAdd3.setPhoneNumber("232112731");
+        
+        p.setWorkAddress(wAdd3);
+        
+        p = personDirectory.addPerson();
+        p.setFirstName("Vedant");
+        p.setLastName("Mane");
+        p.setSsn(23941);
+        p.setAge(26);
+        p.setLastUpdated(date);
+        
+        hAdd4.setStreetAddress("12 Heath Street");
+        hAdd4.setUnit(3);
+        hAdd4.setCity("Riverway");
+        hAdd4.setState("MA");
+        hAdd4.setZipCode(123);
+        hAdd4.setPhoneNumber("243241");
+        
+        p.setHomeAddress(hAdd4);
+        
+        wAdd4.setStreetAddress("21 Heath Street");
+        wAdd4.setUnit(2);
+        wAdd4.setCity("Riverway");
+        wAdd4.setState("MA");
+        wAdd4.setZipCode(234);
+        wAdd4.setPhoneNumber("23412412");
+        
+        p.setWorkAddress(wAdd4);
+        
+        p = personDirectory.addPerson();
+        p.setFirstName("Caden");
+        p.setLastName("Caver");
+        p.setSsn(1231);
+        p.setAge(19);
+        p.setLastUpdated(date);
+        
+        hAdd5.setStreetAddress("45 Forest Hills");
+        hAdd5.setUnit(3);
+        hAdd5.setCity("Jamaica Plain");
+        hAdd5.setState("MA");
+        hAdd5.setZipCode(12312);
+        hAdd5.setPhoneNumber("218391");
+        
+        p.setHomeAddress(hAdd5);
+        
+        wAdd5.setStreetAddress("78 Boston Harbour");
+        wAdd5.setUnit(21);
+        wAdd5.setCity("Boston");
+        wAdd5.setState("MA");
+        wAdd5.setZipCode(21);
+        wAdd5.setPhoneNumber("231231");
+        
+        p.setWorkAddress(wAdd5);
+                
+        
+        
+        
+        
+       
         
         
         

@@ -4,10 +4,15 @@
  */
 package ui.ManagePerson;
 
+import java.awt.CardLayout;
+import java.awt.Component;
+import java.util.Date;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import model.Address;
 import model.Person;
 import model.PersonDirectory;
-import JOption
+
 
 /**
  *
@@ -77,6 +82,8 @@ public class ViewPersonJPanel extends javax.swing.JPanel {
         btnSave = new javax.swing.JButton();
         lblSsn = new javax.swing.JLabel();
         btnUpdate = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        txtLastUpdated = new javax.swing.JTextField();
 
         lblAge.setText("Age");
 
@@ -169,6 +176,8 @@ public class ViewPersonJPanel extends javax.swing.JPanel {
                 btnUpdateActionPerformed(evt);
             }
         });
+
+        jLabel1.setText("Last Updated On:");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -271,12 +280,23 @@ public class ViewPersonJPanel extends javax.swing.JPanel {
                                 .addComponent(btnBack)))
                         .addGap(0, 89, Short.MAX_VALUE)))
                 .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btnUpdate)
-                    .addComponent(btnSave))
-                .addGap(345, 345, 345))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(54, 54, 54)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(btnUpdate))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGap(6, 6, 6)
+                                .addComponent(txtLastUpdated, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(btnSave)))
+                        .addGap(345, 345, 345))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
         layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnSave, btnUpdate});
@@ -340,8 +360,12 @@ public class ViewPersonJPanel extends javax.swing.JPanel {
                     .addComponent(txtZip2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblPhone2)
                     .addComponent(txtPhone2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(35, 35, 35)
-                .addComponent(btnSave)
+                .addGap(16, 16, 16)
+                .addComponent(jLabel1)
+                .addGap(2, 2, 2)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnSave)
+                    .addComponent(txtLastUpdated, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnUpdate)
                 .addContainerGap(27, Short.MAX_VALUE))
@@ -367,12 +391,21 @@ public class ViewPersonJPanel extends javax.swing.JPanel {
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
         // TODO add your handling code here:
         userProcessContainer.remove(this);
+        
+        Component[] panelStack = userProcessContainer.getComponents();
+        JPanel lastPanel = (JPanel) panelStack[panelStack.length -1];
+        
+        ManagePersonJPanel managePersonJPanel = (ManagePersonJPanel) lastPanel;
+        managePersonJPanel.populateTable();
+        
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
     }//GEN-LAST:event_btnBackActionPerformed
 
     private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
         // TODO add your handling code here:
+        Date date = new Date();
+        int pSSN, pAge, pHUnit, pHZip, pHPhone, pWUnit, pWZip, pWPhone;
         String firstName = txtFirstName.getText();
         String lastName = txtLastName.getText();
         String ssn = txtSsn.getText();
@@ -395,7 +428,89 @@ public class ViewPersonJPanel extends javax.swing.JPanel {
             || "".equals(street2) || "".equals(unit2) || "".equals(city2) || "".equals(state2) || "".equals(zip2)) {
             JOptionPane.showMessageDialog(null, "Please enter all the details!", "Warning", JOptionPane.WARNING_MESSAGE);
             return;
-            person.setFirstName
+            
+        }
+        else {
+            try{
+                pSSN = Integer.parseInt(ssn);
+            }catch (Exception e){
+                JOptionPane.showMessageDialog(this, "SSN Should be a numeric value", "Error", JOptionPane.ERROR_MESSAGE);
+                return;
+            }
+            try{
+                pAge = Integer.parseInt(age);
+            }catch (Exception e){
+                JOptionPane.showMessageDialog(this, "Age Should be a numeric value", "Error", JOptionPane.ERROR_MESSAGE);
+                return;
+            }
+            try{
+                pHUnit = Integer.parseInt(unit1);
+            }catch (Exception e){
+                JOptionPane.showMessageDialog(this, "Home Unit Should be a numeric value", "Error", JOptionPane.ERROR_MESSAGE);
+                return;
+            }
+            try{
+                pWUnit = Integer.parseInt(unit2);
+            }catch (Exception e){
+                JOptionPane.showMessageDialog(this, "Work Unit Should be a numeric value", "Error", JOptionPane.ERROR_MESSAGE);
+                return;
+            }
+            try{
+                pHZip = Integer.parseInt(zip1);
+            }catch (Exception e){
+                JOptionPane.showMessageDialog(this, "Home Zip Should be a numeric value", "Error", JOptionPane.ERROR_MESSAGE);
+                return;
+            }
+            try{
+                pWZip = Integer.parseInt(zip2);
+            }catch (Exception e){
+                JOptionPane.showMessageDialog(this, "Work Zip Should be a numeric value", "Error", JOptionPane.ERROR_MESSAGE);
+                return;
+            }
+            try{
+                pHPhone = Integer.parseInt(phone1);
+            }catch (Exception e){
+                JOptionPane.showMessageDialog(this, "Home PHone Number Should be a numeric value", "Error", JOptionPane.ERROR_MESSAGE);
+                return;
+            }
+            try{
+                pWPhone = Integer.parseInt(phone2);
+            }catch (Exception e){
+                JOptionPane.showMessageDialog(this, "Work PHone Number Should be a numeric value", "Error", JOptionPane.ERROR_MESSAGE);
+                return;
+            }
+            Address homeAddress = new Address();
+            Address workAddress = new Address();
+            
+            person.setFirstName(firstName);
+            person.setLastName(lastName);
+            person.setSsn(pSSN);
+            person.setLastUpdated(date);
+            
+            homeAddress.setStreetAddress(street1);
+            homeAddress.setUnit(pHUnit);
+            homeAddress.setCity(city1);
+            homeAddress.setState(state1);
+            homeAddress.setZipCode(pHZip);
+            homeAddress.setPhoneNumber(phone1);
+            
+            person.setHomeAddress(homeAddress);
+            
+            workAddress.setStreetAddress(street2);
+            workAddress.setUnit(pWUnit);
+            workAddress.setCity(city2);
+            workAddress.setState(state2);
+            workAddress.setZipCode(pWZip);
+            workAddress.setPhoneNumber(phone2);
+            
+            person.setWorkAddress(workAddress);
+            
+            JOptionPane.showMessageDialog(this, "Person updated successfully!!", "Success", JOptionPane.INFORMATION_MESSAGE);
+            
+            setViewMode();
+            
+            refreshTextFields();
+            
         }
     }//GEN-LAST:event_btnSaveActionPerformed
 
@@ -409,6 +524,7 @@ public class ViewPersonJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnBack;
     private javax.swing.JButton btnSave;
     private javax.swing.JButton btnUpdate;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel lblAddPerson;
     private javax.swing.JLabel lblAge;
     private javax.swing.JLabel lblCity1;
@@ -433,6 +549,7 @@ public class ViewPersonJPanel extends javax.swing.JPanel {
     private javax.swing.JTextField txtCity2;
     private javax.swing.JTextField txtFirstName;
     private javax.swing.JTextField txtLastName;
+    private javax.swing.JTextField txtLastUpdated;
     private javax.swing.JTextField txtPhone1;
     private javax.swing.JTextField txtPhone2;
     private javax.swing.JTextField txtSsn;
@@ -445,4 +562,70 @@ public class ViewPersonJPanel extends javax.swing.JPanel {
     private javax.swing.JTextField txtZip1;
     private javax.swing.JTextField txtZip2;
     // End of variables declaration//GEN-END:variables
+
+    private void setViewMode() {
+        txtFirstName.setEnabled(false);
+        txtLastName.setEnabled(false);
+        txtSsn.setEnabled(false);
+        txtAge.setEnabled(false);
+        txtStreet1.setEnabled(false);
+        txtStreet2.setEnabled(false);
+        txtCity1.setEnabled(false);
+        txtCity2.setEnabled(false);
+        txtZip1.setEnabled(false);
+        txtZip2.setEnabled(false);
+        txtState1.setEnabled(false);
+        txtState2.setEnabled(false);
+        txtUnit1.setEnabled(false);
+        txtUnit2.setEnabled(false);
+        
+        btnSave.setEnabled(false);
+        btnUpdate.setEnabled(true);
+        
+    }
+
+    private void refreshTextFields() {
+        txtFirstName.setText(person.getFirstName());
+        txtLastName.setText(person.getLastName());
+        txtSsn.setText(Integer.toString(person.getSsn()));
+        txtAge.setText(Integer.toString(person.getAge()));
+        txtStreet1.setText(person.getHomeAddress().getStreetAddress());
+        txtStreet2.setText(person.getWorkAddress().getStreetAddress());
+        txtUnit1.setText(Integer.toString(person.getHomeAddress().getUnit()));
+        txtUnit2.setText(Integer.toString(person.getWorkAddress().getUnit()));
+        txtCity1.setText(person.getHomeAddress().getCity());
+        txtCity2.setText(person.getWorkAddress().getCity());
+        txtState1.setText(person.getHomeAddress().getState());
+        txtState2.setText(person.getWorkAddress().getState());
+        txtPhone1.setText(person.getHomeAddress().getPhoneNumber());
+        txtPhone2.setText(person.getWorkAddress().getPhoneNumber());
+        txtLastUpdated.setText(person.getLastUpdated().toString());
+        
+        
+        
+        
+        
+    }
+
+    private void setEditMode() {
+        txtFirstName.setEnabled(true);
+        txtLastName.setEnabled(true);
+        txtSsn.setEnabled(true);
+        txtAge.setEnabled(true);
+        txtStreet1.setEnabled(true);
+        txtStreet2.setEnabled(true);
+        txtCity1.setEnabled(true);
+        txtCity2.setEnabled(true);
+        txtZip1.setEnabled(true);
+        txtZip2.setEnabled(true);
+        txtState1.setEnabled(true);
+        txtState2.setEnabled(true);
+        txtUnit1.setEnabled(true);
+        txtUnit2.setEnabled(true);
+        
+        btnSave.setEnabled(true);
+        btnUpdate.setEnabled(false);
+    }
 }
+
+

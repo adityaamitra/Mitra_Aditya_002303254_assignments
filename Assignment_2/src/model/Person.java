@@ -4,6 +4,8 @@
  */
 package model;
 
+import java.util.Date;
+
 /**
  *
  * @author mitra
@@ -14,7 +16,40 @@ public class Person {
     private String lastName;
     private int ssn;
     private int Age;
+
+    public Date getLastUpdated() {
+        return lastUpdated;
+    }
+
+    public void setLastUpdated(Date lastUpdated) {
+        this.lastUpdated = lastUpdated;
+    }
     
+    private Date lastUpdated;
+
+    public Address getHomeAddress() {
+        return homeAddress;
+    }
+
+    public void setHomeAddress(Address homeAddress) {
+        this.homeAddress = homeAddress;
+    }
+
+    public Address getWorkAddress() {
+        return workAddress;
+    }
+
+    public void setWorkAddress(Address workAddress) {
+        this.workAddress = workAddress;
+    }
+    private Address homeAddress;
+    private Address workAddress;
+    
+    public Person() {
+        this.workAddress = new Address();
+        this.homeAddress = new Address();
+        
+    }
     public String getFirstName() {
         return firstName;
     }
@@ -47,6 +82,10 @@ public class Person {
         this.Age = Age;
     }
     
+    @Override
+    public String toString(){
+        return firstName;
+    }
     
     
     

@@ -38,11 +38,13 @@ public class PersonDirectory {
     {
         persons.remove(person);
     }
-    public Person SearchPerson(String firstName)
+    public Person search(String searchInput)
     {
         for(Person a: persons)
         {
-            if(a.getFirstName().contains(firstName)){
+            if(a.getFirstName().contains(searchInput) || a.getLastName().contains(searchInput) || 
+                    a.getHomeAddress().getStreetAddress().contains(searchInput) || 
+                    a.getWorkAddress().getStreetAddress().contains(searchInput)){
                 return a;
             }
         }

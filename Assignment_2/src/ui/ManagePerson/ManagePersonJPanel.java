@@ -4,7 +4,11 @@
  */
 package ui.ManagePerson;
 
+import java.awt.CardLayout;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.table.DefaultTableModel;
+import model.Person;
 import model.PersonDirectory;
 
 /**
@@ -22,6 +26,8 @@ public class ManagePersonJPanel extends javax.swing.JPanel {
         initComponents();
         userProcessContainer = container;
         personDirectory = directory;
+        
+        populateTable();
     }
 
     /**
@@ -48,20 +54,25 @@ public class ManagePersonJPanel extends javax.swing.JPanel {
 
         btnBack.setFont(new java.awt.Font("Helvetica Neue", 1, 14)); // NOI18N
         btnBack.setText("<<<BACK");
+        btnBack.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBackActionPerformed(evt);
+            }
+        });
 
         tblPersons.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
             },
             new String [] {
-                "First Name", "Last Name", "Work Address", "Home Address", "SSN"
+                "First Name", "Last Name", "Home City", "Home Zip", "Work City", "Work Zip"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false
+                false, false, false, false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -71,6 +82,11 @@ public class ManagePersonJPanel extends javax.swing.JPanel {
         jScrollPane1.setViewportView(tblPersons);
 
         btnSearch.setText("Search");
+        btnSearch.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSearchActionPerformed(evt);
+            }
+        });
 
         btnView.setText("View");
         btnView.addActionListener(new java.awt.event.ActionListener() {
@@ -80,6 +96,11 @@ public class ManagePersonJPanel extends javax.swing.JPanel {
         });
 
         btnDelete.setText("Delete");
+        btnDelete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDeleteActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -132,7 +153,63 @@ public class ManagePersonJPanel extends javax.swing.JPanel {
 
     private void btnViewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewActionPerformed
         // TODO add your handling code here:
+        int selectedRow = tblPersons.getSelectedRow();
+        
+        if (selectedRow >= 0){
+            Person selectedPerson = (Person) tblPersons.getValueAt(selectedRow, 0);
+            
+            ViewPersonJPanel panel = new ViewPersonJPanel(userProcessContainer,personDirectory,selectedPerson);
+            userProcessContainer.add("ViewPersonJPanel",panel);
+            CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+            layout.next(userProcessContainer);
+            
+        }
+        else {
+            JOptionPane.showMessageDialog(null, "Please Select a Person From the List", "Warning", JOptionPane.WARNING_MESSAGE);
+        }
     }//GEN-LAST:event_btnViewActionPerformed
+
+    private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
+        // TODO add your handling code here:
+        int selectedRow = tblPersons.getSelectedRow();
+        if (selectedRow >= 0){
+            int dialogButton = JOptionPane.YES_NO_OPTION;
+            int dialogResult = JOptionPane.showConfirmDialog(null, "Are You Sure You Want to Delete the Selected Person", "Warning!!!", dialogButton);
+            if (dialogResult == JOptionPane.YES_OPTION){
+                Person selectedPerson = (Person) tblPersons.getValueAt(selectedRow, 0);
+                personDirectory.deletePerson(selectedPerson);
+                populateTable();
+            }
+        } else {
+            JOptionPane.showMessageDialog(null, "Please select a person from the list", "Warning", JOptionPane.WARNING_MESSAGE);
+        }
+    }//GEN-LAST:event_btnDeleteActionPerformed
+
+    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
+        // TODO add your handling code here:
+        userProcessContainer.remove(this);
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.previous(userProcessContainer);
+    }//GEN-LAST:event_btnBackActionPerformed
+
+    private void btnSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSearchActionPerformed
+        // TODO add your handling code here:
+        if(!txtSearch.getText().isBlank()){
+            String searchPerson = txtSearch.getText();
+            Person foundPerson = personDirectory.search(searchPerson);
+            if(foundPerson != null){
+                ViewPersonJPanel panel = new ViewPersonJPanel(userProcessContainer,personDirectory,foundPerson);
+                userProcessContainer.add("ViewPersonJPanel",panel);
+                CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+                layout.next(userProcessContainer);
+            }
+            else {
+                JOptionPane.showMessageDialog(null, "Person not found", "Warning", JOptionPane.WARNING_MESSAGE);
+            }
+        } else {
+            JOptionPane.showMessageDialog(null, "Please Enter Person Details!", "Warning", JOptionPane.WARNING_MESSAGE);
+        }
+    }//GEN-LAST:event_btnSearchActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -145,4 +222,24 @@ public class ManagePersonJPanel extends javax.swing.JPanel {
     private javax.swing.JTable tblPersons;
     private javax.swing.JTextField txtSearch;
     // End of variables declaration//GEN-END:variables
+
+   public void populateTable() {
+       DefaultTableModel model = (DefaultTableModel) tblPersons.getModel();
+       model.setRowCount(0);
+       
+       for (Person p : personDirectory.getPerson()){
+           Object[] row = new Object[6];
+           row[0] = p;
+           row[1] = p.getLastName();
+           row[2] = p.getHomeAddress().getCity();
+           row[3] = p.getHomeAddress().getZipCode();
+           row[4] = p.getWorkAddress().getCity();
+           row[5] = p.getWorkAddress().getZipCode();
+           
+           model.addRow(row);
+       }
+       
+    }
 }
+
+

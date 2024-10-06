@@ -79,6 +79,8 @@ public class CreatePersonJPanel extends javax.swing.JPanel {
         btnSave = new javax.swing.JButton();
         lblSsn = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(204, 255, 255));
+
         lblAge.setText("Age");
 
         txtAge.addActionListener(new java.awt.event.ActionListener() {
@@ -123,6 +125,7 @@ public class CreatePersonJPanel extends javax.swing.JPanel {
 
         lblPhone1.setText("Phone Number");
 
+        lblAddPerson.setBackground(new java.awt.Color(204, 255, 255));
         lblAddPerson.setFont(new java.awt.Font("Helvetica Neue", 3, 18)); // NOI18N
         lblAddPerson.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblAddPerson.setText("Add Person");

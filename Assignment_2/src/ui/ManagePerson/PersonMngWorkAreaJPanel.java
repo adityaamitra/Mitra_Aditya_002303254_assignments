@@ -38,6 +38,8 @@ public class PersonMngWorkAreaJPanel extends javax.swing.JPanel {
         btnCreate = new javax.swing.JButton();
         btnView = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(204, 255, 255));
+
         btnCreate.setText("Add Person");
         btnCreate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

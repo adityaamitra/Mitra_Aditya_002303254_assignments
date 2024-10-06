@@ -85,6 +85,8 @@ public class ViewPersonJPanel extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         txtLastUpdated = new javax.swing.JTextField();
 
+        setBackground(new java.awt.Color(204, 255, 255));
+
         lblAge.setText("Age");
 
         txtAge.addActionListener(new java.awt.event.ActionListener() {

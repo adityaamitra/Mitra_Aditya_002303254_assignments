@@ -48,6 +48,8 @@ public class ManagePersonJPanel extends javax.swing.JPanel {
         btnDelete = new javax.swing.JButton();
         txtSearch = new javax.swing.JTextField();
 
+        setBackground(new java.awt.Color(204, 255, 255));
+
         lblTitle.setFont(new java.awt.Font("Helvetica Neue", 3, 18)); // NOI18N
         lblTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblTitle.setText("Manage Person");

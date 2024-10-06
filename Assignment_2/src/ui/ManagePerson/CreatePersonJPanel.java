@@ -4,17 +4,29 @@
  */
 package ui.ManagePerson;
 
+import java.awt.CardLayout;
+
+
 /**
  *
  * @author mitra
  */
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import model.PersonDirectory;
+
 public class CreatePersonJPanel extends javax.swing.JPanel {
 
     /**
      * Creates new form CreatePersonJPanel
      */
-    public CreatePersonJPanel() {
+    JPanel userProcessContainer;
+    PersonDirectory personDirectory;
+    public CreatePersonJPanel(JPanel container, PersonDirectory directory) {
         initComponents();
+        userProcessContainer = container;
+        personDirectory = directory;
+        
     }
 
     /**
@@ -348,6 +360,10 @@ public class CreatePersonJPanel extends javax.swing.JPanel {
 
     private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
         // TODO add your handling code here:
+        int Ssn;
+        int Age;
+        int phone;
+        int zip;
         String firstName = txtFirstName.getText();
         String lastName = txtLastName.getText();
         String ssn = txtSsn.getText();
@@ -370,7 +386,42 @@ public class CreatePersonJPanel extends javax.swing.JPanel {
             || "".equals(street2) || "".equals(unit2) || "".equals(city2) || "".equals(state2) || "".equals(zip2)) {
             JOptionPane.showMessageDialog(null, "Please enter all the details!", "Warning", JOptionPane.WARNING_MESSAGE);
             return;
+            
+        
         }
+        else {
+                    try{
+                        Ssn = Integer.parseInt(ssn);
+                    }catch (Exception e){
+                    JOptionPane.showMessageDialog(this,"Enter Numeric value for SSN", "Error", JOptionPane.ERROR_MESSAGE);
+                    return;
+                    }
+                    try{
+                        Age = Integer.parseInt(age);
+                    }catch(Exception e){
+                    JOptionPane.showMessageDialog(this, "Age Should be a numeric value", "Error", JOptionPane.ERROR_MESSAGE);
+                    }
+                    try{
+                       phone = Integer.parseInt(phone1); 
+                    }catch(Exception e){
+                        JOptionPane.showMessageDialog(this, "Work Phone Number Should be a numeric value", "Error", JOptionPane.ERROR_MESSAGE);
+                    }
+                    try{
+                       phone = Integer.parseInt(phone2); 
+                    }catch(Exception e){
+                        JOptionPane.showMessageDialog(this, "Home Phone Number Should be a numeric value", "Error", JOptionPane.ERROR_MESSAGE);
+                    }
+                    try{
+                       zip = Integer.parseInt(zip1); 
+                    }catch(Exception e){
+                        JOptionPane.showMessageDialog(this, "Work zip code Should be a numeric value", "Error", JOptionPane.ERROR_MESSAGE);
+                    }
+                    try{
+                       zip = Integer.parseInt(zip2); 
+                    }catch(Exception e){
+                        JOptionPane.showMessageDialog(this, "Home zip code Should be a numeric value", "Error", JOptionPane.ERROR_MESSAGE);
+                    }
+                    }
     }//GEN-LAST:event_btnSaveActionPerformed
 
 

@@ -4,6 +4,9 @@
  */
 package ui.ManagePerson;
 
+import javax.swing.JPanel;
+import model.PersonDirectory;
+
 /**
  *
  * @author mitra
@@ -13,8 +16,12 @@ public class ManagePersonJPanel extends javax.swing.JPanel {
     /**
      * Creates new form ManagePersonJPanel
      */
-    public ManagePersonJPanel() {
+    JPanel userProcessContainer;
+    PersonDirectory personDirectory;
+    public ManagePersonJPanel(JPanel container, PersonDirectory directory) {
         initComponents();
+        userProcessContainer = container;
+        personDirectory = directory;
     }
 
     /**

@@ -45,10 +45,8 @@
                               </Group>
                               <Group type="103" groupAlignment="1" max="-2" attributes="0">
                                   <Component id="txtZip2" pref="140" max="32767" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="txtCity2" pref="140" max="32767" attributes="0"/>
-                                      <Component id="txtStreet2" max="32767" attributes="0"/>
-                                  </Group>
+                                  <Component id="txtCity2" alignment="0" pref="140" max="32767" attributes="0"/>
+                                  <Component id="txtStreet2" alignment="0" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">

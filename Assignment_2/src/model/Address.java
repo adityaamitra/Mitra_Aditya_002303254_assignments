@@ -14,7 +14,26 @@ public class Address {
     private int unit;
     private String city;
     private int zipCode;
-    private int phoneNumber;
+    private String phoneNumber;
+    private String state;
+
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
+    }
+    
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+    
     
     public String getStreetAddress() {
         return streetAddress;
@@ -48,12 +67,6 @@ public class Address {
         this.zipCode = zipCode;
     }
 
-    public int getPhoneNumber() {
-        return phoneNumber;
-    }
 
-    public void setPhoneNumber(int phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
     
 }

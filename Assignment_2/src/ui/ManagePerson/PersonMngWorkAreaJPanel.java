@@ -76,7 +76,7 @@ public class PersonMngWorkAreaJPanel extends javax.swing.JPanel {
 
     private void btnCreateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateActionPerformed
         // TODO add your handling code here:
-        CreatePersonJPanel panel = new CreatePersonJPanel();
+        CreatePersonJPanel panel = new CreatePersonJPanel(userProcessContainer,personDirectory);
         userProcessContainer.add("CreatePersonJPanel",panel);
         
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
@@ -85,7 +85,7 @@ public class PersonMngWorkAreaJPanel extends javax.swing.JPanel {
 
     private void btnViewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewActionPerformed
         // TODO add your handling code here:
-        ManagePersonJPanel panel = new ManagePersonJPanel();
+        ManagePersonJPanel panel = new ManagePersonJPanel(userProcessContainer, personDirectory);
         userProcessContainer.add("ManageAccountJPanel",panel);
         
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();

@@ -176,6 +176,82 @@ private void generateDemoData() {
         p1.setLastName("Mitra");
         p1.setSsn(12345);
         p1.setAge(24);
+        h1.setStreetAddress("S Huntington");
+        h1.setCity("Boston");
+        h1.setUnit(30);
+        h1.setPhoneNumber("9082372993");
+        h1.setState("MA");
+        w1.setStreetAddress("S Huntington");
+        w1.setCity("Boston");
+        w1.setUnit(30);
+        w1.setPhoneNumber("9082372993");
+        w1.setState("MA");
+        
+     
+        
+        Person p2 = personDirectory.addPerson();
+        p2.setFirstName("Kaustubh");
+        p2.setLastName("Ambre");
+        p2.setSsn(14345);
+        p2.setAge(21);
+        h2.setStreetAddress("S Huntington");
+        h2.setCity("Boston");
+        h2.setUnit(3);
+        h2.setPhoneNumber("9072993");
+        h2.setState("MA");
+        w2.setStreetAddress("S Huntington");
+        w2.setCity("Boston");
+        w2.setUnit(32);
+        w2.setPhoneNumber("907299313");
+        w2.setState("MA");
+        
+        Person p3 = personDirectory.addPerson();
+        p3.setFirstName("Mansi");
+        p3.setLastName("Kamble");
+        p3.setSsn(21345);
+        p3.setAge(24);
+        h3.setStreetAddress("S Huntington");
+        h3.setCity("Boston");
+        h3.setUnit(39);
+        h3.setPhoneNumber("87671203");
+        h3.setState("MA");
+        w3.setStreetAddress("S Huntington");
+        w3.setCity("Boston");
+        w3.setUnit(39);
+        w3.setPhoneNumber("87671203");
+        w3.setState("MA");
+        
+        Person p4 = personDirectory.addPerson();
+        p4.setFirstName("Vedant");
+        p4.setLastName("Mane");
+        p4.setSsn(2183);
+        p4.setAge(26);
+        h4.setStreetAddress("S Huntington");
+        h4.setCity("Boston");
+        h4.setUnit(9);
+        h4.setPhoneNumber("21873741");
+        h4.setState("MA");
+        w4.setStreetAddress("S Huntington");
+        w4.setCity("Boston");
+        w4.setUnit(89);
+        w4.setPhoneNumber("239123");
+        w4.setState("MA");
+        
+        Person p5 = personDirectory.addPerson();
+        p5.setFirstName("Abhinav");
+        p5.setLastName("Gangurde");
+        p5.setSsn(312312);
+        p5.setAge(27);
+        h5.setStreetAddress("S Huntington");
+        h5.setCity("Boston");
+        h5.setUnit(12);
+        h5.setPhoneNumber("354231234");
+        h5.setState("MA");
+        w5.setStreetAddress("Brookline");
+        w5.setCity("Boston");
+        w5.setUnit(40);
+        w5.setPhoneNumber("2394294");
+        w5.setState("MA");
         
         
         

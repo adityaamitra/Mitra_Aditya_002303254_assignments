@@ -16,13 +16,19 @@ import java.util.ArrayList;
 public class FacultyProfile {
 
     Person person;
-    ArrayList <FacultyAssignment> facultyassignments; 
+    ArrayList <FacultyAssignment> facultyassignments; //all classes taught by this professor
     
     public FacultyProfile(Person p) {
 
         person = p;
         facultyassignments = new ArrayList();
     }
+    
+    public String getID(){
+        return person.getPersonId();
+    }
+
+    
     public  double getProfAverageOverallRating(){
         
         double sum = 0.0;

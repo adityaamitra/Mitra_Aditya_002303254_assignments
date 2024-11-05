@@ -13,19 +13,15 @@ import java.util.ArrayList;
  */
 public class CourseLoad {
     String semester;
-    ArrayList<SeatAssignment> seatassignments;
+    ArrayList<SeatAssignment> seatassignments; //each represent 1 course registration
     
     public CourseLoad(String s){
         seatassignments = new ArrayList();
         semester = s;
     }
-    public SeatAssignment newSeatAssignment(CourseOffer co){
-        
-        Seat seat = co.getEmptySeat(); // seat linked to courseoffer
-        if (seat==null) return null;
-        SeatAssignment sa = seat.newSeatAssignment(this);
-        seatassignments.add(sa);  //add to students course 
-        return sa;
+    
+    public ArrayList<SeatAssignment> getSeatAssignment(){
+        return seatassignments;
     }
     
     public void registerStudent(SeatAssignment sa){
@@ -37,13 +33,28 @@ public class CourseLoad {
     
     public float getSemesterScore(){ //total score for a full semeter
         float sum = 0;
+        
         for (SeatAssignment sa: seatassignments){
-            sum = sum + sa.GetCourseStudentScore();
+            sum = sum + sa.GetCourseStudentScore() / sa.getCreditHours();
         }
-        return sum;
+        return sum / seatassignments.size();
     }
-        public ArrayList<SeatAssignment> getSeatAssignments(){
+    
+    public ArrayList<SeatAssignment> getSeatAssignments(){
             return seatassignments;
         }
+        
+    public SeatAssignment registerStudentInClass(CourseOffer co, String g){
+        
+        Seat seat = co.getEmptySeat(); // seat linked to courseoffer
+        if (seat==null) return null;
+        SeatAssignment sa = seat.newSeatAssignment(this); 
+        sa.setG(g);
+        seatassignments.add(sa);  //add to students course 
+        
+        
+        return sa;
+        
+    }
             
 }

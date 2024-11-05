@@ -59,17 +59,17 @@ public class Info5001UniversityExample {
         CourseCatalog coursecatalog = department.getCourseCatalog();        
         
         Course[] predefinedCourses = {
-            new Course("App Engg & Dev", "INFO 5100", 4),
-            new Course("WEB DEV", "INFO 6150", 4),
+            new Course("AED", "INFO 5100", 4),
+            new Course("DSEM", "INFO 6105", 4),
             new Course("DMDD", "DAMG 6205", 4),
-            new Course("CLOUD", "CSYE 6151", 4),
-            new Course("Advanced CLOUD", "CSYE 6152", 4),
-            new Course("UI/UX", "INFO 6001", 4),
-            new Course("DS", "CSYE 6159", 4),
-            new Course("Machine Learning", "CSYE 6161", 4),
-            new Course("Career Management", "ENCP 6000", 4),
-            new Course("LAB", "INFO 5101", 4),
-            new Course("ADVANCED Intelligence", "INFO 6170", 4)
+            new Course("Machine Learning", "CSYE 6400", 4),
+            new Course("Artificial Intelligence", "CSYE 6450", 4),
+            new Course("Neural Networks", "INFO 7210", 4),
+            new Course("NLP", "DAMG 6350", 4),
+            new Course("Deep Learning", "INFO 6320", 4),
+            new Course("Data Analytics", "DAMG 5100", 4),
+            new Course("Data Engineering", "CSYE 4530", 4),
+            new Course("Business Intelligence", "INFO 7560", 4)
         };
         
         for (Course course : predefinedCourses) {
@@ -131,13 +131,13 @@ public class Info5001UniversityExample {
 //      Create teacher for class
 
         Person person1 = persondirectory.newPerson("Kal"); 
-        Person person2 = persondirectory.newPerson("Dino"); 
-        Person person3 = persondirectory.newPerson("Pan"); 
-        Person person4 = persondirectory.newPerson("Sahil"); 
-        Person person5 = persondirectory.newPerson("Tanmay"); 
-        Person person6 = persondirectory.newPerson("Max"); 
-        Person person7 = persondirectory.newPerson("Mario"); 
-        Person person8 = persondirectory.newPerson("Dua");
+        Person person2 = persondirectory.newPerson("Vishal"); 
+        Person person3 = persondirectory.newPerson("Josie"); 
+        Person person4 = persondirectory.newPerson("Aditya"); 
+        Person person5 = persondirectory.newPerson("Vedant"); 
+        Person person6 = persondirectory.newPerson("Mansi"); 
+        Person person7 = persondirectory.newPerson("Kaustubh"); 
+        Person person8 = persondirectory.newPerson("Abhinav");
         
         FacultyDirectory facultydirectory = department.getFacultyDirectory();
         FacultyProfile teacher1 = facultydirectory.newFacultyProfile(person1);
